@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.stgpahatid.driver2" version="1.8.4" versionCode="1.8.4" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    <name>Cordova React</name>
+    <description>
+        Cordova React
+    </description>
+    <author email="davidpoarch@outlook.com" href="https://example.reactcordova">
+       dpoarch
+    </author>
+    <content src="index.html" />
+    <allow-navigation href="*" />
+    <allow-intent href="itms:*" />
+    <allow-intent href="itms-apps:*" />
+    <gap:config-file parent="/manifest" platform="android">
+        <supports-screens android:largeScreens="true" android:smallScreens="true" android:xlargeScreens="true" />
+        <application android:theme="@android:style/Theme.NoTitleBar">
+        </application>
+    </gap:config-file>
+    <access origin="*" />
+    <access launch-external="yes" origin="tel:*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <config-file parent="/manifest/application" target="app/src/main/AndroidManifest.xml">
+        <meta-data android:name="com.transistorsoft.locationmanager.license_key" android:value="YOUR_LICENSE_KEY_HERE" />
+    </config-file>
+    <config-file parent="/manifest" target="AndroidManifest.xml">
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+        <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+        <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+        <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    </config-file>
+    <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+        <application android:usesCleartextTraffic="true" />
+    </edit-config>
+    <config-file parent="/*/application" target="AndroidManifest.xml">
+        <uses-library android:name="org.apache.http.legacy" android:required="true" />
+    </config-file>
+    <resource-file src="res/icons/android/drawable-hdpi-icon.png" target="app/src/main/res/mipmap/icon.png" />
+    <resource-file src="res/icons/android/drawable-hdpi-icon.png" target="app/src/main/res/raw/mipmap/icon.png" />
+    <icon density="ldpi" src="res/icons/android/drawable-ldpi-icon.png" />
+    <icon density="mdpi" src="res/icons/android/drawable-mdpi-icon.png" />
+    <icon density="hdpi" src="res/icons/android/drawable-hdpi-icon.png" />
+    <icon density="xhdpi" src="res/icons/android/drawable-xhdpi-icon.png" />
+    <icon density="xxhdpi" src="res/icons/android/drawable-xxhdpi-icon.png" />
+    <icon density="xxxhdpi" src="res/icons/android/drawable-xxxhdpi-icon.png" />
+    <splash density="land-ldpi" src="res/screens/android/drawable-land-ldpi-screen.png" />
+    <splash density="land-mdpi" src="res/screens/android/drawable-land-mdpi-screen.png" />
+    <splash density="land-hdpi" src="res/screens/android/drawable-land-hdpi-screen.png" />
+    <splash density="land-xhdpi" src="res/screens/android/drawable-land-xhdpi-screen.png" />
+    <splash density="land-xxhdpi" src="res/screens/android/drawable-land-xxhdpi-screen.png" />
+    <splash density="land-xxxhdpi" src="res/screens/android/drawable-land-xxxhdpi-screen.png" />
+    <splash density="port-ldpi" src="res/screens/android/drawable-port-ldpi-screen.png" />
+    <splash density="port-mdpi" src="res/screens/android/drawable-port-mdpi-screen.png" />
+    <splash density="port-hdpi" src="res/screens/android/drawable-port-hdpi-screen.png" />
+    <splash density="port-xhdpi" src="res/screens/android/drawable-port-xhdpi-screen.png" />
+    <splash density="port-xxhdpi" src="res/screens/android/drawable-port-xxhdpi-screen.png" />
+    <splash density="port-xxxhdpi" src="res/screens/android/drawable-port-xxxhdpi-screen.png" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="orientation" value="portrait" />
+    <preference name="SplashScreenDelay" value="0" />
+    <preference name="fullscreen" value="false" />
+    <preference name="AndroidXEnabled" value="true" />
+    <preference name="android-minSdkVersion" value="22" />
+    <preference name="android-targetSdkVersion" value="29" />
+    <preference name="KeepRunning" value="true" />
+    <preference name="WindowsStorePublisherName" value="My Name" />
+    <preference name="WindowsStoreIdentityName" value="784321d4-bab8-3957-d0a2-426559520ecc" />
+    <preference name="ios-XCBuildConfiguration-TARGETED_DEVICE_FAMILY" value="1" />
+    <preference name="AutoHideSplashScreen" value="false" />
+    <preference name="FadeSplashScreen" value="false" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="EnableViewportScale" value="false" />
+</widget>
